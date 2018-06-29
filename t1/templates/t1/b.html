@@ -30,8 +30,6 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="shape-container">
-					<!-- Dynamically add your circles here! -->
-					<!-- Example circle: <div class="p2-circle bg-blue"></div> -->
 				</div>
 			</div>
 		</div>
@@ -39,8 +37,19 @@
 
 
 <script type="text/javascript">
-
-	// your solution here
+var i = 0;
+    var appendDiv = setInterval(function() {
+      $( ".float-right" ).click(function(){
+        i = 1000;
+      })
+      if (i==1000) {
+        clearInterval(appendDiv);
+      } else (
+        $(".shape-container").append("<div class='p2-circle bg-blue'></div>")
+      )
+      i++
+    }, 1000)
+	
 
 </script>
 </body>
