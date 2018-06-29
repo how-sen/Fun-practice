@@ -8,13 +8,69 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
-
+<!-- 		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" /> -->
+<style type="text/css">
+      .body{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+      .flexDisplay {
+      /* This is one way to get multiple "columns" to appear side-by-side */
+      display:flex;}
+          .red {
+            width:50vw;
+            height:33vh;
+          background-color:red;
+          }
+  .lightblue {
+            width:50vw;
+            height:33vh;
+          background-color:lightblue;
+          }
+          .yellow {
+            width:50vw;
+            height:33vh;
+          background-color:yellow;
+          }
+  .black {
+            width:50vw;
+            height:33vh;
+          background-color:black;
+          }
+          .green{
+            width:50vw;
+            height:33vh;
+          background-color:green;
+          }
+  .blue{
+    width:50vw;
+            height:33vh;
+          background-color:blue;
+  }
+    </style>
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
 	<body>
-		<!-- Your layout here -->
-
+    <div class="flexDisplay">
+      <div class="left">
+        <div class="red">
+        </div>
+        <div class="green">
+        </div>
+        <div class="black">
+        </div>
+      </div>
+      <div class="right">
+        <div class="yellow">
+        </div>
+        <div class="blue">
+        </div>
+        <div class="lightblue">
+        </div>
+      </div>
+    </div>
 	</body>
 </html>

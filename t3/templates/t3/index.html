@@ -28,6 +28,29 @@
 			background: grey;
 			padding: 5px;
 		}
+    
+    .highlighter_focus_in2{
+      height: 100px;
+			width: 120px;
+			background: red;
+			padding: 5px;}
+    .dropped2{
+      height: 100px;
+			width: 120px;
+			background: darkred;
+			padding: 5px;}
+    
+    .highlighter_focus_in1{
+      height: 100px;
+			width: 120px;
+			background: blue;
+			padding: 5px;}
+
+    .dropped1{
+      height: 100px;
+			width: 120px;
+			background: darkblue;
+			padding: 5px;}
 
 	</style>
 
@@ -57,7 +80,48 @@
 		</div>
 	</div>
   <script>
-	  // your solution here
+    $( "#drag-box").draggable({
+      revert: true, 
+      revertDuration: 600, 
+    });
+    $("#drop-box-2").droppable({
+        accept: '#drag-box',
+        over: function(event, ui) {
+           $('#drag-box').addClass('highlighter_focus_in2');
+             $('#drag-box').removeClass('small-box');
+        },
+        out: function(event, ui) {
+           $('#drag-box').addClass('small-box');
+             $('#drag-box').removeClass('highlighter_focus_in2');
+        },    
+        drop: function() { 
+            $('#drag-box').addClass('dropped2');
+             $('#drag-box').removeClass('highlighter_focus_in2');
+          $( "#drag-box").draggable({
+              revert: false, 
+            });
+        }
+    });
+    $("#drop-box-1").droppable({
+        accept: '#drag-box',
+        over: function(event, ui) {
+           $('#drag-box').addClass('highlighter_focus_in1');
+             $('#drag-box').removeClass('small-box');
+        },
+        out: function(event, ui) {
+           $('#drag-box').addClass('small-box');
+             $('#drag-box').removeClass('highlighter_focus_in1');
+        },    
+        drop: function() { 
+            $('#drag-box').addClass('dropped1');
+             $('#drag-box').removeClass('highlighter_focus_in1');
+           $( "#drag-box").draggable({
+              revert: false, 
+            });
+            }
+      
+    });
+
   </script>
 </body>
 </html>
