@@ -8,13 +8,35 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
-
-		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
-		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- 		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" /> -->
+    <style type="text/css">
+      .container{
+        padding-top:10px;
+        padding-bottom:10px;
+        background-color: purple;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap:10px;
+        width:100%;
+      }
+      #one{
+        background-color:orange;
+      }
+      #two{
+        background-color:orange;
+      }
+      #three{
+        background-color:orange;
+      }     
+    </style>
+<!-- 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script> -->
 	</head>
 	<body>
-		<!-- Your layout here -->
-
+		<div class="container">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+    </div>
 	</body>
 </html>

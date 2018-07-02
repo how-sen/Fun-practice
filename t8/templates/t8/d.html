@@ -8,13 +8,57 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
+<!-- 		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" /> -->
+    <style type="text/css">
+      .outside{
+        padding-top:30px;
+        padding-bottom:30px;
+        padding-left:20px;
+        padding-right:20px;
+      }
+      .flexshow {
+        display:flex;
+        flex-direction:row-reverse;
+      }
+      .box{
+        width:16.5vw;
+        height:26vh;
+        margin: 20px;
+        background-color: orange;
+      }
+      .col-box{
+        width:16.5vw;
+        height:26vh;
+        margin: 20px;
+        background-color: orange;
+      }
+    </style>
 
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
-	<body>
-		<!-- Your layout here -->
-
+	<body style="background-color: purple">
+		<div class="outside">
+      <div class="flexshow">
+        <div class="col-box">
+        </div>
+        <div class="col-box">
+        </div>
+        <div class="col-box">
+        </div>
+        <div class="col-box">
+        </div>
+        <div class="col-box">
+        </div>
+    </div>
+    <div class="flexshow">
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+      </div>
+    </div>
 	</body>
 </html>
